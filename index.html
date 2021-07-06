@@ -9,7 +9,26 @@
     </head>
     <body>
         <h1>Etch-The-Sketch</h1>
-        <button>RESET</button>
+
+        <div class="btn-radio">
+            <p>Pick a canvas size:</p>
+
+            <div>
+                <input type="radio" id="128" name="size" value="128" />
+                <label for="128">128</label>
+            </div>
+
+            <div>
+                <input type="radio" id="256" name="size" value="256" checked />
+                <label for="256">256</label>
+            </div>
+
+            <div>
+                <input type="radio" id="512" name="size" value="512" />
+                <label for="512">512</label>
+            </div>
+            <button id="reset-btn">RESET</button>
+        </div>
 
         <div class="container">
             <div class="grid-container"></div>
