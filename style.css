@@ -1,59 +1,68 @@
 body {
     background-color: cadetblue;
+    /* box-sizing: border-box; */
 }
 
 h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     color: rgb(17, 30, 211);
 }
 
 .container {
     /* background-color: darkcyan; */
-    height: 95vw;
-    width: 95vh;
+    height: 90%;
+    width: 90%;
     margin: 0 auto;
 }
 
 .grid-container {
     /* margin: 0 auto; */
-    height: 650px;
-    width: 700px;
+    /* height: 410px; */
+    width: 40rem;
+    height: 40rem;
+    /* border: red solid 1px; */
+    background-color: white;
     display: flex;
-    justify-content: center;
-    align-items: center; */
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 0 auto;
+    box-sizing: content;
 }
 
-.grid-square-128 {
-    height: 60px;
-    width: 60px;
+.grid-square-16 {
+    box-sizing: border-box;
+
+    height: 2.5rem;
+    width: 2.5rem;
     color: white;
-    border: 1px black solid;
+    border: 1px black dotted;
 }
 
-.grid-square-256 {
-    height: 40px;
-    width: 40px;
+.grid-square-32 {
+    box-sizing: border-box;
+
+    height: 1.25rem;
+    width: 1.25rem;
     color: white;
-    border: 1px black solid;
+    border: 1px black dotted;
 }
 
-.grid-square-512 {
-    height: 20px;
-    width: 20px;
+.grid-square-64 {
+    box-sizing: border-box;
+
+    height: 0.625rem;
+    width: 0.625rem;
     color: white;
-    border: 1px black solid;
+    border: 1px black dotted;
 }
 
 .btn-radio {
-    
-    border-radius: 10px;
-    font-size: 1.1rem;
-    margin-left: 45vw;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 button {
@@ -62,5 +71,6 @@ button {
     width: 100px;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    border-radius: 10px;
+    font-size: 1.1rem;
 }
