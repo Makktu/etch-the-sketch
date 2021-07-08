@@ -1,6 +1,8 @@
 "use strict";
 
 function initGrid() {
+    toggle = 0;
+    colTog = 0;
     gridContainer.innerHTML = "";
     let size = howManySquares();
     // need to calculate size of cells relative to width of board -- which is...
@@ -11,8 +13,16 @@ function initGrid() {
             const div = document.createElement("div");
             div.classList.add(`grid-square-${size}`);
             div.addEventListener("mouseover", function (e) {
-                if (toggle === 1) {
+                if (toggle === 1 && colTog === 0) {
                     e.target.style.backgroundColor = "black";
+                }
+                if (toggle === 1 && colTog === 1) {
+                    let r = Math.trunc(Math.random() * 257);
+                    let g = Math.trunc(Math.random() * 257);
+                    let b = Math.trunc(Math.random() * 257);
+                    messages.textContent = `rgb(${r},${g},${b})`;
+
+                    e.target.style.backgroundColor = `rgb(${r},${g},${b})`;
                 }
             });
             gridContainer.appendChild(div);
@@ -37,9 +47,11 @@ function howManySquares() {
 const container = document.querySelector(".container");
 const gridContainer = document.querySelector(".grid-container");
 const reset = document.getElementById("reset-btn");
+const colorToggle = document.querySelector(".colours");
 const messages = document.querySelector(".messages");
 
 let toggle = 0;
+let colTog = 0; // color trail off by default
 
 gridContainer.addEventListener("click", () => {
     if (toggle === 1) {
@@ -50,6 +62,14 @@ gridContainer.addEventListener("click", () => {
 });
 
 reset.addEventListener("click", initGrid);
+
+colorToggle.addEventListener("click", () => {
+    if (colTog === 1) {
+        colTog = 0;
+    } else {
+        colTog = 1;
+    }
+});
 
 initGrid();
 
