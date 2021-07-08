@@ -14,8 +14,17 @@ h1 {
     height: 90%;
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
 }
 
+.left {
+    width: 5%;
+}
+
+.right {
+    margin-left: 5%;
+}
 .grid-container {
     /* margin: 0 auto; */
     /* height: 410px; */
