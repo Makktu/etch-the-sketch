@@ -20,7 +20,6 @@ function initGrid() {
                     let r = Math.trunc(Math.random() * 257);
                     let g = Math.trunc(Math.random() * 257);
                     let b = Math.trunc(Math.random() * 257);
-                    messages.textContent = `rgb(${r},${g},${b})`;
 
                     e.target.style.backgroundColor = `rgb(${r},${g},${b})`;
                 }
