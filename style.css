@@ -52,24 +52,27 @@ p {
 .container {
     /* background-color: darkcyan; */
     height: 90%;
-    width: 45%;
+    min-width: 100%;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 .left {
     width: 15rem;
     height: 40rem;
     /* border: red solid 3px; */
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
+    /* margin-left: 300px; */
 }
 
 .right {
-    margin-left: 16rem;
+    /* margin-left: 16rem; */
     margin-top: 1rem;
     /* border: green 3px solid; */
 }
